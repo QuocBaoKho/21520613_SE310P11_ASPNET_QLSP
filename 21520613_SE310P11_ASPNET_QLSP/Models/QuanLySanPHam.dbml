@@ -18,4 +18,42 @@
       <Association Name="Catalog_Product" Member="Catalog" ThisKey="CatalogId" OtherKey="Id" Type="Catalog" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.CapNhatGia" Method="CapNhatGia">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UnitPrice" Parameter="unitPrice" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.XoaSanPham" Method="XoaSanPham">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChiTietSanPham" Method="ChiTietSanPham">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ChiTietSanPhamResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatalogId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Picture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ThemSanPham" Method="ThemSanPham">
+    <Parameter Name="CatalogId" Parameter="catalogId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ProductCode" Parameter="productCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ProductName" Parameter="productName" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="Picture" Parameter="picture" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UnitPrice" Parameter="unitPrice" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ToanBoSanPham" Method="ToanBoSanPham">
+    <ElementType Name="ToanBoSanPhamResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatalogId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Picture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
