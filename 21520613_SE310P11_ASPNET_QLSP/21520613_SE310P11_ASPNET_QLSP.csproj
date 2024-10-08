@@ -127,6 +127,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductForDisplay.cs" />
     <Compile Include="Models\QuanLySanPHam.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -200,6 +201,20 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Catalogs\Index.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Catalogs\Products.cshtml" />
+    <Content Include="Views\Catalogs\Create.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Catalogs\Edit.cshtml" />
+    <Content Include="Views\Catalogs\Delete.cshtml" />
+    <Content Include="Views\Products\ChiTietSanPham_sp.cshtml" />
+    <Content Include="Views\Products\ThemSanPham_sp.cshtml" />
+    <Content Include="Views\Products\ToanBoSanPham_sp.cshtml" />
+    <Content Include="Views\Products\BiggerThanK.cshtml" />
+    <Content Include="Views\Products\ArrangeViaPrice.cshtml" />
+    <Content Include="Views\Products\ArrangeViaPriceViaDescendingName.cshtml" />
+    <Content Include="Views\Products\DisplayProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
